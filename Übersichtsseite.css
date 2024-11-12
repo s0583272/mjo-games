@@ -24,6 +24,8 @@ h6{
     -webkit-text-stroke: 1px white; /* rand Farbe der schrift*/
     color: gold;
 }
+
+
 /* Stile für die gesamte Seite */
 body {
     font-family: 'Press Start 2P', sans-serif; /* Setzt die Retro-Schriftart */
