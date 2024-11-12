@@ -7,7 +7,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('../Bilder/hintergrund.webp'); /* Use the correct background image */
+    background-image: url('Bilder/hintergrund.webp'); /* Use the correct background image */
     background-size: cover; /* Bild deckt die gesamte Seite ab */
     background-repeat: no-repeat; /* Verhindert Wiederholung des Bildes */
     background-position: center; /* Zentriert das Bild */
