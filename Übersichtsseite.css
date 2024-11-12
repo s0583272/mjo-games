@@ -28,7 +28,7 @@ h6{
 body {
     font-family: 'Press Start 2P', sans-serif; /* Setzt die Retro-Schriftart */
     color: #FFD700; /* Gelber Text für gute Lesbarkeit */
-    background-image: url('../Bilder/hintergrund.webp'); /* Hintergrundbild für das Seiten-Design */
+    background-image: url('/Bilder/hintergrund.webp'); /* Hintergrundbild für das Seiten-Design */
     background-size: cover; /* Hintergrundbild füllt die Seite */
     background-repeat: no-repeat; /* Bild wiederholt sich nicht */
     background-position: center; /* Bild zentriert */
