@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Spiele-Shop</title>
+    <link rel="stylesheet" href="../Css/OnlineShop.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <!-- Zum Warenkorb -Button -->
+    <nav class="cart-header">
+        <h1>MJO GAMESCOM </h1>
+        <!-- Zurück-Button -->
+        <button class="back-btn" onclick="goBack()">Zurück</button>
+        <div class="cart-info">
+            <span class="cart-count">Artikel: <span id="item-count">0</span></span>
+            <span class="cart-total">Gesamt: <span id="total-price">0.00 €</span></span>
+            <button onclick="goToCart()" class="cart-button">Zum Warenkorb</button>
+        </div>
+        <form class="search-form" action="#" method="get" onsubmit="preventDefault(); searchGames();">
+            <label>
+                <input type="text" id="search-input" class="search-input" placeholder="Suche..." name="search" oninput="searchGames()">
+            </label>
+            <button type="submit" class="search-button">Suchen</button>
+        </form>
+        <!-- Menü -Button -->
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown()">Menü</button>
+            <div class="dropdown-content" id="myDropdown">
+                <a href="index.html">Startseite</a>
+                <a href="Kontaktformular.html">Kontakformular</a>
+                <a href="Impressum.html">Impressum</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Kategorien-Button -->
+    <button class="main-category-btn" onclick="toggleCategoryDropdown()">Kategorien</button>
+    <div class="dropdown-content" id="dropdown-content">
+        <button onclick="filterGames('all')">Alle</button>
+        <button onclick="filterGames('Abenteuer & Rollenspiele')">Abenteuer & Rollenspiele</button>
+        <button onclick="filterGames('Action & Shooting')">Action & Shooting</button>
+        <button onclick="filterGames('Rennenspiele')">Rennenspiele</button>
+        <button onclick="filterGames('Sci-Fi & Weltraum')">Sci-Fi & Weltraum</button>
+        <button onclick="filterGames('Strategie & Familienspiel')">Strategie & Familienspiel</button>
+        <button onclick="filterGames('Survival')">Survival</button>
+    </div>
+</header>
+<div class="shop-container">
+    <!-- Bestehende Spiele (1-12) -->
+    <!-- Spiele 1-4 -->
+    <div class="game-card" data-category ="Sci-Fi & Weltraum">
+        <a href="Detailsseite.html">
+            <img src="../Bilder/Game%201.png" alt="Spiel 1" class="game-image">
+            <h2>Univers X</h2>  </a>
+        <p class="description">Eine spannende Beschreibung von Spiel 1.</p>
+        <p class="price" data-price="29.99">29,99 €</p>
+        <button class="add-to-cart" onclick="addToCart(this)">In den Warenkorb</button>
+    </div>
+    <div class="game-card" data-category ="Strategie & Familienspiel">
+        <img src="../Bilder/Game%202.png" alt="Spiel 2" class="game-image">
+        <h2>Dropoly</h2>
+        <p class="description">Eine spannende Beschreibung von Spiel 5.</p>
+        <p class="price" data-price="34.99">34,99 €</p>
+        <button class="add-to-cart" onclick="addToCart(this)">In den Warenkorb</button>
+    </div>
+
+    <div class="game-card" data-category ="Rennenspiele">
+        <img src="../Bilder/Game%203.png" alt="Spiel 3" class="game-image">
+        <h2>Gen VI </h2>
+        <p class="description">Eine spannende Beschreibung von Spiel 6.</p>
+        <p class="price" data-price="44.99">44,99 €</p>
+        <button class="add-to-cart" onclick="addToCart(this)">In den Warenkorb</button>
+    </div>
+
+    <div class="game-card" data-category ="Survival">
+        <img src="../Bilder/Game%204.png" alt="Spiel 4" class="game-image">
+        <h2>Lost 2</h2>
+        <p class="description">Eine spannende Beschreibung von Spiel 7.</p>
+        <p class="price" data-price="59.99">59,99 €</p>
+        <button class="add-to-cart" onclick="addToCart(this)">In den Warenkorb</button>
+    </div>
+
+    <div class="game-card" data-category ="Abenteuer & Rollenspiele">
+        <img src="../Bilder/Game%206.png" alt="Spiel 5" class="game-image">
+        <h2> Dragon Slayer </h2>
+        <p class="description">Eine spannende Beschreibung von Spiel 8.</p>
+        <p class="price" data-price="24.99">24,99 €</p>
+        <button class="add-to-cart" onclick="addToCart(this)">In den Warenkorb</button>
+    </div>
+
+    <div class="game-card" data-category ="Sci-Fi & Weltraum">
+        <img src="../Bilder/Game%205.png" alt="Spiel 6" class="game-image">
+        <h2>Planet X </h2>
+        <p class="description">Eine spannende Beschreibung von Spiel 9.</p>
+        <p class="price" data-price="19.99">19,99 €</p>
+        <button class="add-to-cart" onclick="addToCart(this)">In den Warenkorb</button>
+    </div>
+
+    <div class="game-card" data-category ="Abenteuer & Rollenspiele">
+        <img src="../Bilder/Spiel%203.webp" alt="Spiel 10" class="game-image">
+        <h2>Fortnitte 2 </h2>
+        <p class="description">Eine spannende Beschreibung von Spiel 10.</p>
+        <p class="price" data-price="29.99">29,99 €</p>
+        <button class="add-to-cart" onclick="addToCart(this)">In den Warenkorb</button>
+    </div>
+
+    <div class="game-card" data-category ="Survival">
+        <img src="../Bilder/spiel%201.webp" alt="Spiel 11" class="game-image">
+        <h2> Last Man V </h2>
+        <p class="description">Eine spannende Beschreibung von Spiel 11.</p>
+        <p class="price" data-price="39.99">39,99 €</p>
+        <button class="add-to-cart" onclick="addToCart(this)">In den Warenkorb</button>
+    </div>
+
+    <!-- Weitere Spiele (13-20) -->
+    <div class="game-card" data-category ="Strategie & Familienspiel">
+        <img src="../Bilder/Game%2012.png" alt="Spiel 13" class="game-image">
+        <h2> Moritz Adventure</h2>
+        <p class="description">Eine spannende Beschreibung von Spiel 13.</p>
+        <p class="price" data-price="19.99">19,99 €</p>
+        <button class="add-to-cart" onclick="addToCart(this)">In den Warenkorb</button>
+    </div>
+
+    <div class="game-card" data-category ="Rennenspiele">
+        <img src="../Bilder/Game%2010.png" alt="Spiel 14" class="game-image">
+        <h2> Fast Way 3 </h2>
+        <p class="description">Eine spannende Beschreibung von Spiel 14.</p>
+        <p class="price" data-price="29.99">29,99 €</p>
+        <button class="add-to-cart" onclick="addToCart(this)">In den Warenkorb</button>
+    </div>
+
+    <div class="game-card" data-category ="Action & Shooting">
+        <img src="../Bilder/Spiel%202.webp" alt="Spiel 15" class="game-image">
+        <h2> Solo Field V </h2>
+        <p class="description">Eine spannende Beschreibung von Spiel 15.</p>
+        <p class="price" data-price="34.99">34,99 €</p>
+        <button class="add-to-cart" onclick="addToCart(this)">In den Warenkorb</button>
+    </div>
+
+    <div class="game-card" data-category ="Abenteuer & Rollenspiele">
+        <img src="../Bilder/Game%2020.png" alt="Spiel 16" class="game-image">
+        <h2> Amitios Fight </h2>
+        <p class="description">Eine spannende Beschreibung von Spiel 16.</p>
+        <p class="price" data-price="39.99">39,99 €</p>
+        <button class="add-to-cart" onclick="addToCart(this)">In den Warenkorb</button>
+    </div>
+
+    <div class="game-card" data-category ="Strategie & Familienspiel">
+        <img src="../Bilder/Game%2013.webp" alt="Spiel 17" class="game-image">
+        <h2>Smash Party </h2>
+        <p class="description">Eine spannende Beschreibung von Spiel 17.</p>
+        <p class="price" data-price="49.99">49,99 €</p>
+        <button class="add-to-cart" onclick="addToCart(this)">In den Warenkorb</button>
+    </div>
+
+    <div class="game-card" data-category ="Sci-Fi & Weltraum">
+        <img src="../Bilder/Game%2021.webp" alt="Spiel 18" class="game-image">
+        <h2>GPT Terminat</h2>
+        <p class="description">Eine spannende Beschreibung von Spiel 18.</p>
+        <p class="price" data-price="54.99">54,99 €</p>
+        <button class="add-to-cart" onclick="addToCart(this)">In den Warenkorb</button>
+    </div>
+
+    <div class="game-card" data-category ="Abenteuer & Rollenspiele">
+        <img src="../Bilder/Game%209.png" alt="Spiel 19" class="game-image">
+        <h2> Eskahlor </h2>
+        <p class="description">Eine spannende Beschreibung von Spiel 19.</p>
+        <p class="price" data-price="59.99">59,99 €</p>
+        <button class="add-to-cart" onclick="addToCart(this)">In den Warenkorb</button>
+    </div>
+
+    <div class="game-card" data-category ="Rennenspiele">
+        <img src="../Bilder/Game%2011.png" alt="Spiel 20" class="game-image">
+        <h2> Fast Way 2</h2>
+        <p class="description">Eine spannende Beschreibung von Spiel 20.</p>
+        <p class="price" data-price="64.99">64,99 €</p>
+        <button class="add-to-cart" onclick="addToCart(this)">In den Warenkorb</button>
+    </div>
+    <footer class="footer-note">
+        <p1>© 2023 MJO GAMESCOM GmbH. Diese Seite dient nur Demonstrationszwecken.</p1>
+    </footer>
+</div>
+<script>
+    let itemCount = 0;
+    let totalPrice = 0.00 ;
+
+    // Funktion, um die Anzahl der Artikel und den Gesamtpreis zu aktualisieren
+    function updateCartInfo() {
+        document.getElementById("item-count").textContent = itemCount;
+        document.getElementById("total-price").textContent = totalPrice.toFixed(2) + " €";
+    }
+
+    // Funktion, um ein Spiel in den Warenkorb zu legen
+    function addToCart(button) {
+        const gameCard = button.closest('.game-card');
+        const price = parseFloat(gameCard.querySelector('.price').getAttribute('data-price'));
+
+        // Artikelanzahl und Gesamtpreis aktualisieren
+        itemCount += 1;
+        totalPrice += price ;
+
+        // Zeigt die neuen Werte an
+        updateCartInfo();
+    }
+
+    function goBack() {
+        window.history.back();
+    }
+
+    // Funktion für Dropdown-Menü
+    function toggleDropdown() {
+        const dropdown = document.getElementById("myDropdown");
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+    // function for Dropdown-Menü
+    function toggleCategoryDropdown() {
+        const dropdown = document.getElementById("dropdown-content");
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+    // function to filter games based on the category
+    function filterGames(category) {
+        const games = document.querySelectorAll('.game-card');
+        games.forEach(game => {
+            if (category === 'all' || game.getAttribute('data-category') === category) {
+                game.style.display = 'block';
+            } else {
+                game.style.display = 'none';
+            }
+        });
+        // close the Dropdown
+        toggleCategoryDropdown();
+    }
+    function searchGames() {
+        const searchInput = document.getElementById('search-input').value.toLowerCase();
+        const games = document.querySelectorAll('.game-card');
+        games.forEach(game => {
+            const gameName = game.querySelector('h2').textContent.toLowerCase();
+            game.style.display = gameName.includes(searchInput) ? 'block' : 'none';
+        });
+    }
+    function goToCart() {
+        window.location.href = 'Warenkorb.html';
+    }
+</script>
+</body>
+</html>

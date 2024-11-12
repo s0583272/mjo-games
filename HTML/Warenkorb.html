@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Warenkorb</title>
+    <title>Spiele-Shop</title>
+    <link rel="stylesheet" href="../Css/Warenkorb.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+<div class="cart-header">
+    <h1>MJO GAMESCOM </h1>
+    <button class="back-btn" onclick="goBack()">Zurück</button>
+    <div class="cart-info">
+        <span class="cart-count">Artikel: <span id="item-count">0</span></span>
+        <span class="cart-total">Gesamt: <span id="total-price">0.00 €</span></span>
+    </div>
+    <form class="search-form" action="#" method="get">
+        <label>
+            <input type="text" class="search-input" placeholder="Suche..." name="search">
+        </label>
+        <button type="submit" class="search-button">Suchen</button>
+    </form>
+    <!-- Menü -Button -->
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown()">Menü</button>
+        <div class="dropdown-content" id="myDropdown">
+            <a href="index.html">Startseite</a>
+            <a href="OnlineShop.html">Shop</a>
+            <a href="Detailsseite.html">Detailseite</a>
+            <a href="Kontaktformular.html">Kontakformular</a>
+            <a href="Impressum.html">Impressum</a>
+        </div>
+    </div>
+</div>
+</header>
+<footer class="footer-note">
+    <p1>© 2023 MJO GAMESCOM GmbH. Diese Seite dient nur Demonstrationszwecken.</p1>
+</footer>
+</body>
+</html>

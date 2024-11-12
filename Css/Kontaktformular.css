@@ -1,0 +1,131 @@
+body {
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    margin-top: 0;
+    padding-top: 0;
+    background-image: url('../Bilder/MJO Logo.png'); /* Use the correct background image */
+    background-size: cover; /* Bild deckt die gesamte Seite ab */
+    background-repeat: no-repeat; /* Verhindert Wiederholung des Bildes */
+    background-position: center; /* Zentriert das Bild */
+    height: 200vh; /* Stellt sicher, dass das Bild die gesamte Höhe der Seite einnimmt */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: center;
+    color: #FFD700; /* Schwarze Textfarbe */
+    background-color: #2c2c2c;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 100px; /* Fügt oben mehr Platz hinzu */
+    justify-content: center; /* Setzt die Überschrift links ausgerichtet */
+    margin-top: 100px; /* Fügt oben mehr Platz hinzu */
+}
+h2 {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    color: #FFD700;
+    background-color: AccentColor;
+    background-color: #2c2c2c;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, textarea, select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    background-color: #3c3c3c;
+    color: #f0f0f0;
+}
+
+input[type="submit"] {
+    background-color: gold;
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #d4af37;
+}
+
+.privacy {
+    display: flex;
+    align-items: center;
+}
+
+.privacy input {
+    margin-right: 10px;
+}
+
+a {
+    color: gold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #cccccc;
+}
+p1{
+    color: #d4af37;
+    background-color: #2c2c2c;
+}
+/* Button-Styling */
+button, .back-btn {
+    background-color: #FFD700;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover, .back-btn:hover {
+    background-color: rgba(255,211,155);
+}
+
+/* Zurück-Button (Position absolut) */
+.back-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}

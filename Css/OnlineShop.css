@@ -1,0 +1,320 @@
+/* Basic style settings for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin:0;
+    padding:0;
+    font-family: 'Press Start 2P', sans-serif;
+    background-image: url('../Bilder/hintergrund.webp'); /* Use the correct background image */
+    background-size: cover; /* Image covers the entire page */
+    background-repeat: no-repeat; /* Prevents image repetition */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Fixes the image when scrolling */
+    background-color: #FFD700; /* Light gray background */
+    height: 150vh; /* Ensures the image takes the entire page height */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+nav{
+    display: inline-block;
+}
+header {
+    display: compact;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FFD700;
+}
+
+/* Styles for the main heading */
+/* Applied to all pages */
+
+h1 {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    color: #FFD700;
+    padding: 20px 30px;
+    background-color: #2c2c2c;
+}
+
+/* Styles for the subheading */
+/* Applied to all pages */
+
+h2 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 1rem;
+
+}
+
+/* Styles for paragraph text */
+p {
+    font-size: 1rem; /* Reduces font size of paragraphs */
+    color: #FFFF00; /* Text color for all descriptions */
+    background-color: white; /* Color of text boxes */
+    border-radius: 4px;
+    margin-top: 0; /* Reduces spacing to previous element */
+}
+
+p1 {
+    font-size: 1rem; /* Reduces font size of paragraphs */
+    color: #FFFF00; /* Text color for all descriptions */
+    border-radius: 4px;
+    margin-top: 0; /* Reduces spacing to previous element */
+}
+
+
+/* Set the main container to Flexbox to center content */
+/* Applied to all pages */
+
+main {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100vh; /* Takes up entire viewport height */
+    width: 100%; /* Takes up entire width */
+    text-align: center; /* Centers text */
+}
+
+/* Button styling for "Back" button */
+/* Applied to all pages */
+
+button, .back-btn {
+    background-color: #FFD700;
+    color: black;
+    padding: 10px 20px; /* Adjusts size of the back button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Back button (absolute positioning) */
+/* Applied to all pages */
+
+.back-btn {
+    position: absolute; /* Positions button absolutely */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    z-index: 1000; /* Ensures button is on top */
+}
+
+button:hover, .back-btn:hover {
+    background-color: rgba(215, 215, 0, 0.8); /* Light gray-yellow on hover */
+}
+
+/* Styling for search form */
+.search-form {
+    display: flex; /* Flexbox for layout of the search field */
+    align-items: center; /* Vertical centering */
+    margin-right: 5px; /* Space from left side */
+}
+
+.search-input {
+    padding: 10px; /* Inner padding for input field */
+    font-size: 16px; /* Font size */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    margin-right: 5px; /* Space between input field and button */
+    color: #000; /* Text color in input field */
+}
+
+.search-button {
+    background-color: #FFD700; /* Background color of button */
+    color: black; /* Text color */
+    padding: 10px 15px; /* Inner padding */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+.search-button:hover {
+    background-color: rgba(255, 211, 155); /* Lighter yellow on hover */
+}
+
+/* Shop container */
+
+.shop-container {
+    align-items: center;
+    flex-wrap: wrap; /* Allows cards to wrap */
+    justify-content: center; /* Centers cards */
+    gap: 20px; /* Space between cards */
+    max-width: 1200px; /* Maximum width */
+    margin-top: 20px;
+    display: flex;
+    place-items: center;   /* Zentriert das Element sowohl horizontal als auch vertikal */
+    height: 100vh;
+}
+
+/* Game card */
+
+.game-card {
+    background-color: #fff; /* White background for card */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for 3D effect */
+    width: 250px; /* Card width */
+    transition: transform 0.3s; /* Transition effect on hover */
+}
+
+.game-card:hover {
+    transform: scale(1.05); /* Enlarges on hover */
+}
+
+/* Game image */
+
+.game-image {
+    width: 100%; /* Full width of images */
+    height: auto; /* Automatic height */
+    border-radius: 4px; /* Rounded corners for images */
+}
+
+/* Price */
+
+.price {
+    font-size: 1.5rem; /* Font size for price */
+    color: #FFD700; /* Golden color */
+    margin: 10px 0; /* Space above and below */
+}
+
+/* Description */
+
+.description {
+    font-size: 0.9rem; /* Smaller font size */
+    color: #333; /* Dark gray for description */
+    margin-bottom: 15px; /* Space above button */
+}
+
+/* "Add to Cart" button */
+
+.add-to-cart {
+    background-color: #FFD700; /* Yellow for button */
+    color: black; /* Black font color */
+    padding: 10px 15px; /* Inner padding for button */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 1rem; /* Font size */
+    transition: background-color 0.3s; /* Transition effect on hover */
+}
+
+.add-to-cart:hover {
+    background-color: rgba(215, 215, 0, 0.8); /* Light gray-yellow on hover */
+}
+
+/* Dropdown button styling */
+
+.dropbtn {
+    background-color: #FFD700; /* Yellow */
+    color: black;
+    padding: 10px 20px; /* Same height as other buttons */
+    font-size: 16px; /* Same font size */
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown container */
+
+.dropdown {
+    position: absolute; /* Positioned absolutely */
+    top: 20px; /* Distance from top */
+    left: 20px; /* Distance from left */
+}
+
+/* Dropdown content */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFD700;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Styles for links in dropdown */
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px; /* Inner padding for links */
+    text-decoration: none;
+    display: block; /* Block element */
+}
+
+/* Hover effect for dropdown links */
+
+.dropdown-content a:hover {
+    background-color: #ffff99; /* Light gray background on hover */
+}
+
+/* Show dropdown when button is pressed */
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+/* Style for main category button */
+.category-dropdown {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+}
+
+.main-category-btn {
+    background-color: #FFD700;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.main-category-btn:hover {
+    background-color: #ffff99;
+}
+
+/* Style for dropdown menu */
+.dropdown-content {
+    display: none; /* Hides the dropdown element by default */
+    position: absolute;
+    background-color: #FFD700;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+
+}
+/* Show dropdown when active */
+.show {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
